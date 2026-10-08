@@ -44,11 +44,11 @@ spec:
           - cat
         tty: true
         volumeMounts:
-          - name: regcred-dh
-            mountPath: /docker-config/dockerhub
-            readOnly: true
           - name: regcred-gh
             mountPath: /docker-config/github
+            readOnly: true
+          - name: regcred-gl
+            mountPath: /docker-config/gitlab
             readOnly: true
         resources:
           requests:
@@ -66,7 +66,7 @@ spec:
               path: config.json
       - name: regcred-dl
         secret:
-          secretName: regcred-dl
+          secretName: regcred-gl
           items:
             - key: .dockerconfigjson
               path: config.json
