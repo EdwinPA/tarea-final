@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: lab3
+    image: tarea-final:edwin-pacheco
+    hostname: lab3
+    environment:
+      - AMBIENTE=dev
+      - API_KEY=OB68b5MwQk6773z3
+    ports:
+      - 5000:3000
+    
