@@ -44,7 +44,7 @@ spec:
         - name: regcred-gh
       containers:
         - name: app-edwin-pacheco
-          image: ghcr.io/edwinpa/tarea-final:latest
+          image: ghcr.io/edwinpa/tarea-final:edwin-pacheco
           imagePullPolicy: Always
           env:
             - name: AMBIENTE

@@ -64,7 +64,7 @@ spec:
           items:
             - key: .dockerconfigjson
               path: config.json
-      - name: regcred-dl
+      - name: regcred-gl
         secret:
           secretName: regcred-gl
           items:
