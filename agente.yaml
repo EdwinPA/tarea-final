@@ -43,6 +43,9 @@ spec:
         command:
           - cat
         tty: true
+        env:
+          - name: BUILDKITD_FLAGS
+            value: "--oci-worker-no-process-sandbox"
         securityContext:
           appArmorProfile:
             type: Unconfined
