@@ -76,7 +76,7 @@ pipeline {
                 container('kubectl-tool'){
                     withKubeConfig([credentialsId: 'kubernetes-config']){
                         sh '''
-                           kubectl -n ${K8S_NAMESPACE} set image deployment/app-edwin-pacheco ns-edwin-pacheco=${GH_REPO}:${BUILD_NUMBER}
+                           kubectl -n ${K8S_NAMESPACE} set image deployment/app-edwin-pacheco app-edwin-pacheco=${GH_REPO}:${BUILD_NUMBER}
                            kubectl -n ${K8S_NAMESPACE} rollout status deployment/app-edwin-pacheco
                         '''
                     }
