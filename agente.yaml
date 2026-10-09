@@ -43,6 +43,11 @@ spec:
         command:
           - cat
         tty: true
+        securityContext:
+          appArmorProfile:
+            type: Unconfined
+          seccompProfile:
+            type: Unconfined
         volumeMounts:
           - name: regcred-gh
             mountPath: /docker-config/github
